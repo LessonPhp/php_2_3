@@ -13,5 +13,5 @@ if(isset($_POST['add'])) {
     // исправила
     $article->save();
     header('Location: /lesson_3/home_work/admin/index.php');
-
+    die;
 }

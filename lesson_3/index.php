@@ -1,9 +1,11 @@
 <?php
 
+use App\View;
+
 require __DIR__ . '/autoload.php';
 
 
-$view = new \App\View();
+$view = new View();
 
 $view->articles = \App\Models\Article::findAllNews();
 

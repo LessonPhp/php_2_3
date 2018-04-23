@@ -6,7 +6,7 @@ if(isset($_GET['id'])) {
     $id = (int)$_GET['id'];
     $article = \App\Models\Article::findById($id);
 } else {
-    header('Location: /lesson_3/home_work/index.php');
+    header('Location: /lesson_3/home_work/admin/index.php');
     die;
 }
 
