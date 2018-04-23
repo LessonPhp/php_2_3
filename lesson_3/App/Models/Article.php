@@ -22,30 +22,28 @@ class Article extends Model
     public function __get($name)
     {
         if('author' === $name) {
-            if(isset($this->author_id)) {
                 return Author::findById($this->author_id);
             } else {
                 return null;
             }
-        }
     }
     /**
      * @param $name
-     * @return bool|null
+     * @return bool
      */
 
     // переделала
     public function __isset($name)
     {
-        if ('author' === true) {
-            if (!empty($this->author_id)) {
-                return Author::findById($this->author_id);
-            }
+        if ('author' === $name) {
+            return true;
+        } else {
             return false;
         }
     }
+
     /**
-     * @return array
+     * @return array|bool
      */
     public static function findAllNews()
     {

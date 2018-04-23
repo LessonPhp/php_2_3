@@ -22,7 +22,7 @@ class View implements \Countable
 
     /**
      * @param $template
-     * @return mixed
+     * @return string
      */
     public function display($template)
     {

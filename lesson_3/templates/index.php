@@ -15,11 +15,11 @@ foreach ($this->articles as $article) : ?>
     <h1 style="text-align: center;"><?php echo $article->title; ?></h1>
     <p style="text-align: justify; text-indent: 15px;"><?php echo $article->content; ?></p>
     <?php
-    if(isset($article->author_id)) { ?>
+    if(!empty($article->author)) { ?>
         <p style="text-align: justify; text-indent: 15px;"><?php echo $article->author->name; ?></p>
         <?php
     } else { ?>
-        Нет автора
+        <p style="text-align: justify; text-indent: 15px;">Нет автора</p>
     <?php
     }
     ?>
